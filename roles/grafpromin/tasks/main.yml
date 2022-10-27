@@ -1,0 +1,23 @@
+- name: Grafana (CentOS)
+  command: snap install grafana
+  when: ansible_distribution == "CentOS"
+
+- name: Prometheus (CentOS)
+  command: snap install prometheus
+  when: ansible_distribution == "CentOS"
+
+- name: Grafana (CentOS)
+  command: snap install --edge  influxdb
+  when: ansible_distribution == "CentOS"
+
+- name: Grafana (Ubuntu)
+  command: snap install grafana
+  when: ansible_distribution == "Ubuntu"
+
+- name: Prometheus (Ubuntu)
+  command: snap install prometheus
+  when: ansible_distribution == "Ubuntu"
+
+- name: Grafana (Ubuntu)
+  command: snap install --edge  influxdb
+  when: ansible_distribution == "Ubuntu"
